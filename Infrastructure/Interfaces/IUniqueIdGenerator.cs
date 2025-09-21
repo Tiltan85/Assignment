@@ -2,6 +2,6 @@
 {
     public interface IUniqueIdGenerator
     {
-        static abstract string Generate();
+        string Generate();
     }
 }
