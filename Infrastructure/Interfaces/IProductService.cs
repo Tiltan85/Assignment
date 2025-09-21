@@ -7,4 +7,5 @@ public interface IProductService
 {
     ProductResult AddProductToList(Product product);
     ProductResult<IEnumerable<Product>> GetAllProducts();
+    Product CreateProduct(string newName, decimal newPrice);
 }
