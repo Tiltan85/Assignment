@@ -1,2 +1,9 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using Infrastructure.Interfaces;
+using Pressentation.ConsoleApp;
+using Pressentation.ConsoleApp.Services;
+
+IInputService inputService = new ConsoleInputService();
+IConsoleDisplayServices consoleDisplay = new ConsoleDisplayService();
+
+var displayMenu = new ConsoleMainMenu(inputService, consoleDisplay);
+displayMenu.MainMenu();
