@@ -4,8 +4,8 @@ namespace Pressentation.ConsoleApp.Services;
 
 public class ConsoleDisplayService(IProductService productService, IInputService inputService) : IConsoleDisplayServices
 {
-    private readonly IProductService _productService;
-    private readonly IInputService _inputService;
+    private readonly IProductService _productService = productService;
+    private readonly IInputService _inputService = inputService;
     public void DisplayAddProduct()
     {
         Console.Clear();
